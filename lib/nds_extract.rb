@@ -50,7 +50,7 @@ end
 
 def gross_per_studio(collection)
   while x < collection.length do
-    movie = collection[i]
+    movie = collection[x]
 
     if !result[movie[:studio]]
       result[movie[:studio]] = movie[:worldwide_gross]
@@ -65,7 +65,7 @@ end
 
 def movies_with_directors_set(source)
   while x < source.length do
-    dir_info_hash = source[i]
+    dir_info_hash = source[x]
     director_name = dir_info_hash[:name]
     directors_movies = dir_info_hash[:movies]
     a_o_a_movies_by_dir << movies_with_director_key(director_name, directors_movies)
